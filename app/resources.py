@@ -6,9 +6,9 @@ from flask_jwt_extended import (create_access_token, create_refresh_token,
 import requests
 from config import codeChecker
 
-USER_SERVICE = 'http://172.17.0.2:5050/'
-INCOME_SERVICE = 'http://172.17.0.3:5051/'
-EXPENSE_SERVICE = 'http://172.17.0.5:5052/'
+USER_SERVICE = 'http://127.0.0.1:5050/'
+INCOME_SERVICE = 'http://127.0.0.1:5051/'
+EXPENSE_SERVICE = 'http://127.0.0.1:5052/'
 
 
 # auth service
