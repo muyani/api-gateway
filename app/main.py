@@ -17,14 +17,14 @@ jwt = JWTManager(app)
 api = Api(app)
 
 # user endpoints
-api.add_resource(resources.UserRegistration,'/user/register')
-api.add_resource(resources.UserLogin,'/user/login')
-api.add_resource(resources.UserLogout,'/user/logout')
-api.add_resource(resources.AllUsers,'/user/logout')
+api.add_resource(resources.UserRegistration,'/users/register')
+api.add_resource(resources.UserLogin,'/users/login')
+api.add_resource(resources.UserLogout,'/users/logout')
+# api.add_resource(resources.AllUsers,'/users/logout')
 
 # income endpoints
-api.add_resource(resources.Income,'/income/income<int:id>')
-api.add_resource(resources.Incomes,'/income/income')
+api.add_resource(resources.Income,'/incomes/<int:id>')
+api.add_resource(resources.Incomes,'/income')
 api.add_resource(resources.Barcode,'/income/barcode/<int:id>')
 api.add_resource(resources.Barcodes,'/income/barcode')
 api.add_resource(resources.Category,'/income/category/<string:name>')

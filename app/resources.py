@@ -60,6 +60,15 @@ class Income(Resource):
         else:
             return codeChecker(res.status_code)
 
+
+    def get(self):
+        res = requests.get(INCOME_SERVICE + 'income')
+        if res.status_code == 201 or res.status_code == 200:
+         # print(res.json())
+            return res.json()
+        else:
+            return codeChecker(res.status_code)
+
     def put(self,id):
         res = requests.get(INCOME_SERVICE + 'income/'+id, json=request.get_json())
         if res.status_code == 201 or res.status_code == 200:
@@ -75,6 +84,7 @@ class Income(Resource):
             return res.json()
         else:
             return codeChecker(res.status_code)
+
 class Incomes(Resource):
     def post(self):
         res = requests.post(INCOME_SERVICE + 'income',json=request.get_json())
@@ -98,6 +108,7 @@ class Incomes(Resource):
             return res.json()
         else:
             return codeChecker(res.status_code)
+
 class Barcode(Resource):
     def get(self,id):
         res = requests.get(INCOME_SERVICE + 'barcode/'+id)
