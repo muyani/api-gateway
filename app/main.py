@@ -11,7 +11,7 @@ import urls
 
 app = Flask(__name__)
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False
-app.config['JWT_SECRET_KEY'] = 'oho11hoho111'
+app.config['JWT_SECRET_KEY'] = ''
 jwt = JWTManager(app)
 
 api = Api(app)
